@@ -1,0 +1,118 @@
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s linear;
+
+    &.-active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: top;
+        gap: 10px;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: #F1F7FE;
+        width: 40vw;
+        transition: 0.15s all;
+        transform: scale(0.5);
+        &.-active {
+            transform: scale(1);
+        }
+    }
+    &__input {
+        border: 2px solid #CFD5E9; 
+        outline: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+
+        &.-question {
+            padding: 5px 10px;
+            width: 35vw;
+        }
+
+        &.-answer {
+            padding: 5px 10px;
+            width: 15vw;
+        }
+    }
+    &__input:focus {
+        border: 2px solid #3f4ba3;
+    }
+    &__button {
+        transition: all 0.15s linear;
+        border: none;
+        outline: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: 500;
+        color: white;
+        background-color: #3E4684;
+
+        &.-add {
+            background-color: #FF8A00;
+        }
+        &.-cancel {
+            padding: 10px 20px;
+            background-color: #EB5757;
+        }
+        &.-save {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3E4684;
+        }
+        &.-blocked {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #80849e;
+        }
+        &.-blocked:hover {
+            cursor: default;
+             background-color: #80849e;
+             filter: brightness(100%);
+        }
+        
+    }
+    
+    &__button:hover {
+        transition: all 0.15s linear;
+        cursor: pointer;
+        filter: brightness(115%);
+    }
+    &__questions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__answers {
+        display: flex;
+        gap: 10px;
+    }
+    &__answer_inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    &__answer_radios {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-around;
+    }
+}

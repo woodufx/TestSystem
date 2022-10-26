@@ -11,7 +11,7 @@ const LoginPage = () => {
     const [password, setPassword] = useState('');
     const authorization = () => {
         localStorage.setItem("login", "true");
-        navigate("/mainPage");
+        navigate("/mainPage/test");
     }
     const validateForm = (login: string, password: string) => {
         (adminData.login === login && adminData.password === password) ? authorization() : alert("Неверный логин или пароль!");

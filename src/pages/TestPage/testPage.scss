@@ -1,4 +1,91 @@
-.main-page {
+.tests {
     height: 100vh;
-    background-color:aquamarine;
+    background-color: #F1F7FE;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        padding: 2vh 7vw;
+        gap: 10px;
+    }
+    &__headerline {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__add {
+        height: 42px;
+        width: 42px;
+    }
+    &__add:hover {
+        cursor: pointer;
+    }
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__card {
+        padding: 30px 50px;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.2s;
+        &.-hiden {
+            transition: all 0.2s;
+            background-color: #38438d2f;
+        }
+    }
+    &__names {
+        width: 30vw;
+    }
+    &__themes {
+        width: 12vw;
+    }
+    &__questions {
+        width: 10vw;
+    }
+    &__line {
+        display: flex;
+        gap: 10px;
+    }
+    &__info {
+        font-weight: 500;
+    }
+    &__actions {
+        display: flex;
+        gap: 10px;
+    }
+    &__button {
+        transition: all 0.15s linear;
+        border: none;
+        outline: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: 500;
+        color: white;
+        background-color: #3E4684;
+
+        &.-edit {
+            background-color: #FF8A00;
+        }
+        &.-delete {
+            background-color: #EB5757;
+        }
+        
+    }
+    
+    &__button:hover {
+        transition: all 0.15s linear;
+        cursor: pointer;
+        filter: brightness(115%);
+    }
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #3E4684;
 }

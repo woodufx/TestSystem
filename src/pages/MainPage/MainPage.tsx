@@ -4,19 +4,23 @@ import "./mainPage.scss";
 
 const MainPage = () => {
     let navigate = useNavigate();
-    const logout = () => {
+    const logout = (): void => {
         localStorage.setItem("login", "false");
         navigate("/");
     }
     return (
         <>
-        <header>
-            <Link to="/mainPage/test">Tests</Link>
-            <Link to="/mainPage/users">Users</Link>
-            <button className="button" onClick={()=> logout()}> Выйти</button>
+        <header className="header">
+            <div className="header__inner">
+                <div className="header__links">
+                    <div className="header__title">Tests Today</div>
+                    <Link to="/mainPage/test" className="header__link">Тесты</Link>
+                    <Link to="/mainPage/users" className="header__link">Пользователи</Link>
+                </div>
+            <button className="header__button" onClick={()=> logout()}> Выйти</button>
+            </div>
         </header>
         <Outlet/>
-        <footer> Tests page 2022 </footer>
         </>
     );
 };

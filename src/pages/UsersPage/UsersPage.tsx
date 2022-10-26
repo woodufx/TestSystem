@@ -4,7 +4,7 @@ import "./usersPage.scss";
 const UsersPage = () => {
 
     return (
-        <div className="main-page">
+        <div className="users">
             Страница с пользователямии
         </div>  
     );

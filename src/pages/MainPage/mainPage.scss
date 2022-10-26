@@ -1,7 +1,52 @@
-.main-page {
-    height: 100vh;
-    background-color:aquamarine;
-}
-.button {
-    background-color: blue;
+.header {
+    &__inner{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 7vw;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        color: #3E4684;
+    }
+    &__links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+    }
+    &__link {
+        color: black;
+        font-size: 24px;
+        font-weight: 500;
+        text-decoration: none;
+
+    }
+    &__link:visited {
+        color: black;
+        transition: 0.1s ease-in;
+    }
+    &__link:hover {
+        transition: 0.1s ease-in;
+        color: #3E4684;
+        scale: 1.05;
+    }
+    &__button {
+        transition: all 0.15s linear;
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: 500;
+        color: white;
+        background-color: #3E4684;
+    }
+    &__button:hover {
+        transition: all 0.15s linear;
+        cursor: pointer;
+        background-color: #3f4ba3;
+    }
 }
