@@ -1,0 +1,40 @@
+.dropdown {
+    width: 400px;
+    cursor: pointer;
+    margin: 0 auto;
+    user-select: none;
+    position: relative;
+    &__btn {
+        padding: 15px 20px;
+        background-color: #fff;
+        box-shadow: 3px 3px 10px 6px rgba(0,0,0, 0.06);
+        font-weight: 500;
+        color: #3E4684;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__chevrone {
+        transition: all 0.2s linear;
+        &.-rotate {
+            transform: rotate(-180deg);
+            transition: all 0.2s linear;
+        }
+    }
+    &__content {
+        position: absolute;
+        top: 110%;
+        box-shadow: 3px 3px 10px 6px rgba(0,0,0, 0.06);
+        background-color: #fff;
+        font-weight: 400;
+        width: 100%;
+        z-index: 10;
+    }
+    &__item {
+        padding: 10px 20px;
+        transition: all 0.2s;
+    }
+    &__item:hover {
+        background-color: #F1F7FE;
+    }
+}

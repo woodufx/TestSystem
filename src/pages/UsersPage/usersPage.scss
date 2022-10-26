@@ -1,4 +1,15 @@
 .users {
     height: 100vh;
     background-color: #F1F7FE;
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        padding: 2vh 7vw;
+        gap: 10px;
+    }
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }

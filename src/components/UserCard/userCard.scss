@@ -1,0 +1,59 @@
+.users {
+    &__card {
+        padding: 30px 50px;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        transition: all 0.2s;
+    }
+    &__top {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__bottom {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    &__stats {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__stat {
+        display: flex;
+        gap: 10px;
+    }
+    &__line {
+        display: flex;
+        gap: 10px;
+    }
+    &__header {
+        font-weight: 500;
+    }
+    &__attempts {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__hr {
+        width: 100%;
+        height: 2px;
+        background-color: #3E4684;
+    }
+    &__attempt {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
