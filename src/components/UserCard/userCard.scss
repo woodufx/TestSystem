@@ -56,4 +56,26 @@
         display: flex;
         justify-content: space-between;
     }
+    &__close {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__button {
+        transition: all 0.15s linear;
+        border: none;
+        padding: 2px 10px;
+        outline: none;
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: 400;
+        color: white;
+        background-color: #3E4684;
+    }
+    
+    &__button:hover {
+        transition: all 0.15s linear;
+        cursor: pointer;
+        filter: brightness(115%);
+    }
 }

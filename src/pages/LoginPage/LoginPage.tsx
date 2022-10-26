@@ -7,13 +7,13 @@ import { adminData } from "../../constants/Config";
 const LoginPage = () => {
 
     let navigate = useNavigate();
-    const [login, setLogin] = useState('');
-    const [password, setPassword] = useState('');
+    const [login, setLogin] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
     const authorization = () => {
         localStorage.setItem("login", "true");
         navigate("/mainPage/test");
     }
-    const validateForm = (login: string, password: string) => {
+    const validateForm = (login: string, password: string): void => {
         (adminData.login === login && adminData.password === password) ? authorization() : alert("Неверный логин или пароль!");
     }
 

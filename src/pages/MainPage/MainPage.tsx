@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import "./mainPage.scss";
 
 const MainPage = () => {
     let navigate = useNavigate();
     const logout = (): void => {
-        localStorage.setItem("login", "false");
+        localStorage.clear();
         navigate("/");
     }
+    
+    useEffect(() => {
+        if (!localStorage.getItem("login")) {
+            navigate("/");
+        }
+    }, []);
+
     return (
         <>
         <header className="header">

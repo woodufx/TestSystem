@@ -5,8 +5,8 @@ import { tests, ITest, IQuestiion, setNewTests } from "../../constants/Tests";
 import Modal from "../../components/Modal/Modal";
 
 const TestPage = () => {
-    const [currentTests, setTests] = useState(tests);
-    const [modalActive, setModalActive] = useState(false);
+    const [currentTests, setTests] = useState<ITest[]>(tests);
+    const [modalActive, setModalActive] = useState<boolean>(false);
 
     useEffect(() => {
         setNewTests(currentTests);

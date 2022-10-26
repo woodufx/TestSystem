@@ -94,7 +94,7 @@ const UserCard = (props: UserProps) => {
                                     </div>
                                     <div className="users__line">
                                         <div className="users__header">Время на прохождеие:</div>
-                                        <div className="users__name">{attempt.timeSpent}</div>
+                                        <div className="users__name">{attempt.timeSpent + " мин. "}</div>
                                     </div>
                                     <div className="users__line">
                                         <div className="users__header">Правильные ответы:</div>
@@ -103,6 +103,9 @@ const UserCard = (props: UserProps) => {
                                 </div>
                                 )
                         }
+                    </div>
+                    <div className="users__close">
+                        <button className="users__button" onClick={() => setActive("")}> Закрыть</button>
                     </div>
                 </div>
             }
